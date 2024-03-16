@@ -16,7 +16,6 @@
   font-style: normal;
 }
 
-
 :root {
   --primary-color: ;
   --secondary-color: ;
@@ -26,7 +25,20 @@
   --secondary-font-family: ;
 }
 
+* {
+  border: 1px solid gray;
+  padding: 0px;
+  margin: 0px;
+}
 
 body {
 
+}
+
+header {
+}
+
+#forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
