@@ -22,9 +22,25 @@
     <section class="forms" id="forms">
       <form class="lend-form" id="lend-form" name="lendForm">
         <h2 class="form-title" id="lendFormTitle">Lend Form</h2>
-        <label>Platform</label>
-        <label>Game Title</label>
-        <Label>Edition</Label>
+        <label>Platform<br>
+          <select>
+            <option value="">Select Platform</option>
+            <option value="PS5">PS5</option>
+            <option value="Switch">Switch</option>
+            <option value="XBox Series">XBox X/S</option>
+          </select>
+        </label>
+        <br>
+        <label>Game Title<br>
+          <input type="text" placeholder="Game Title">
+        </label>
+        <br>
+        <Label>Edition
+          <br>
+          <input type="text" placeholder="Standard / Deluxe">
+        </Label>
+        <br>
+        <input type="submit" value="Lend Game">
       </form>
       <form class="request-form" id="request-form" name="requestForm">
         <h2 class="form-title" id="requetFormTitle">Request Form</h2>
