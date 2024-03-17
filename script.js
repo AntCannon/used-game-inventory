@@ -1,6 +1,7 @@
 // get form data
-const addGameForm = document.getElementById("add-game-form")
-console.log(addGameForm)
+const gameForm = document.getElementById("add-game-form")
+console.log(gameForm)
+
 
 
 // get table body
@@ -24,6 +25,19 @@ addListenerToRemoveButtons();
 
 
 // create new row
-const inventoryRow = document.createElement("tr");
+const tableColumns = ["platform", "game-title", "game-edition", "stock", "out", "total", "remove"]
+
+function addInventoryRow () {
+  const inventoryRow = document.createElement("tr");
+  for (let elClass of tableColumns) {
+    const cell = document.createElement("td");
+    cell.classList.add("elClass");
+    if (elClass === "stock") {
+    }
+    inventoryRow.appendChild(cell)
+  }
+  tableBody.appendChild(inventoryRow);
+}
+
 
 // create cells
