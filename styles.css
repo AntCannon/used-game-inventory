@@ -42,3 +42,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+#request-form {
+  display: none;
+}
+
+td {
+}
+
+.borrow-button {
+  cursor: pointer;
+}
