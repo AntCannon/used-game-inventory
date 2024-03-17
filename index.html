@@ -50,9 +50,9 @@
         <label>Return Date</label>
       </form>
     </section>
-    <section class="inventory">
+    <section class="inventory-section">
       <h2 class="inventory-title">Inventory</h2>
-      <table>
+      <table id="inventory-table">
         <thead>
           <tr>
             <th>Platform</th>
@@ -64,18 +64,16 @@
             <th>Borrow</th>
           </tr>
         </thead>
-        <tbody>
-          <form class="id">
-            <tr>
-              <td class="platform" name="platform">PS5</td>
-              <td class="game-title">Horizon Zero Dawn</td>
-              <td class="game-edition">Standard</td>
-              <td class="stock">20</td>
-              <td class="out">15</td>
-              <td class="expected-availabilty">04/05/24</td>
-              <td class="borrow-button"><input type="submit" value="Borrow"></td>
-            </tr>
-          </form>
+        <tbody id="inventory-body">
+          <tr>
+            <td class="platform" name="platform">PS5</td>
+            <td class="game-title">Horizon Zero Dawn</td>
+            <td class="game-edition">Standard</td>
+            <td class="stock">20</td>
+            <td class="out">15</td>
+            <td class="expected-availability">04/05/24</td>
+            <td class="borrow"><button class="borrow-button" type="submit">Borrow</button></td>
+          </tr>
         </tbody>
       </table>
     </section>
