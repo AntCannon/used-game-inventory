@@ -4,7 +4,11 @@ console.log(gameForm)
 
 gameForm.addEventListener("submit", e => {
   e.preventDefault();
-  console.log("form submit")
+  const platform = gameForm.platform.value
+  const gameTitle = gameForm.gametitle.value
+  const edition = gameForm.edition.value
+  const stock = gameForm.initialStock.value
+  addInventoryRow();
 })
 
 // get table body
@@ -35,6 +39,7 @@ function addInventoryRow () {
   for (let elClass of tableColumns) {
     const cell = document.createElement("td");
     cell.classList.add("elClass");
+
     if (elClass === "stock") {
     }
     inventoryRow.appendChild(cell)
