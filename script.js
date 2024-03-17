@@ -32,14 +32,18 @@ function addListenerToRemoveButtons() {
 addListenerToRemoveButtons();
 
 
-// create new row
-const tableColumns = ["platform", "game-title", "game-edition", "stock", "out", "total", "remove"]
+// table columns
+const tableColumns = ["platform", "game-title", "game-edition", "stock-cell", "out", "total", "remove"]
 
 function addInventoryRow (platform, gameTitle, edition, stock) {
+  // create new row
+  
   const inventoryRow = document.createElement("tr");
+  
+  // create cells
   for (let elClass of tableColumns) {
     const cell = document.createElement("td");
-    cell.classList.add("elClass");
+    cell.classList.add(elClass);
     if (elClass === "platform") {
       cell.innerText = platform
     }
@@ -51,8 +55,10 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
       cell.innerText = edition
     }
 
-    if (elClass === "stock") {
-      cell.innerText = stock
+    if (elClass === "stock-cell") {
+      createStockDecrementButton(cell)
+      createStockSpan(cell, stock)
+      createStockIncrementButton(cell)
     }
 
     if (elClass === "total") {
@@ -60,9 +66,8 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
     }
 
     if (elClass === "remove") {
-      cell.innerText = stock
 
-      
+
     }
 
 
@@ -71,5 +76,30 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
   tableBody.appendChild(inventoryRow);
 }
 
+// create stock decrement button
+function createStockDecrementButton(node) {
+  const decrementButton = document.createElement("button");
+  decrementButton.classList.add("decrease-stock")
+  decrementButton.innerText = "-"
+  node.appendChild(decrementButton)
+}
 
-// create cells
+// create stock span
+function createStockSpan(node, stock) {
+  const span = document.createElement("span");
+  span.classList.add("stock");
+  span.innerText = stock;
+  node.appendChild(span)
+}
+
+// create stock increment button
+function createStockIncrementButton(node) {
+  const incrementButton = document.createElement("button");
+  incrementButton.classList.add("increase-stock")
+  incrementButton.innerText = "+"
+  node.appendChild(incrementButton)
+}
+
+
+// create inventory row remove button
+// function createRowRemoveButton
