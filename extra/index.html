@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Game Inventory</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="sulphur-point-bold">
+    <header>
+      <h1>Game Grind!</h1>
+      <h2>Lend Games, Level Up</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+      </nav>
+    </header>
+    <section class="forms" id="forms">
+      <form class="lend-form" id="lend-form" name="lendForm">
+        <h2 class="form-title" id="lendFormTitle">Lend Form</h2>
+        <label>Platform<br>
+          <select>
+            <option value="">Select Platform</option>
+            <option value="PS5">PS5</option>
+            <option value="Switch">Switch</option>
+            <option value="XBox Series">XBox X/S</option>
+          </select>
+        </label>
+        <br>
+        <label>Game Title<br>
+          <input type="text" placeholder="Game Title">
+        </label>
+        <br>
+        <Label>Edition
+          <br>
+          <input type="text" placeholder="Standard / Deluxe">
+        </Label>
+        <br>
+        <input type="submit" value="Lend Game">
+      </form>
+      <form class="request-form" id="request-form" name="requestForm">
+        <h2 class="form-title" id="requetFormTitle">Request Form</h2>
+        <label>Platform</label>
+        <label>Game Title</label>
+        <label>Edition</Label>
+        <label>Return Date</label>
+      </form>
+    </section>
+    <section class="inventory-section">
+      <h2 class="inventory-title">Inventory</h2>
+      <table id="inventory-table">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Game Title</th>
+            <th>Edition</th>
+            <th>Stock</th>
+            <th>Out</th>
+            <th>Expected Availability</th>
+            <th>Borrow</th>
+          </tr>
+        </thead>
+        <tbody id="inventory-body">
+          <tr>
+            <td class="platform" name="platform">PS5</td>
+            <td class="game-title">Horizon Zero Dawn</td>
+            <td class="game-edition">Standard</td>
+            <td class="stock">20</td>
+            <td class="out">15</td>
+            <td class="expected-availability">04/05/24</td>
+            <td class="borrow"><button class="borrow-button" type="submit">Borrow</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+
+</html>
