@@ -22,10 +22,7 @@ console.log(tableBody)
 function addListenerToRemoveButtons() {
   const removeButtons = tableBody.querySelectorAll(".remove-button")
   for (let removeButton of removeButtons) {
-    removeButton.addEventListener("click", (e) => {
-      console.log("remove button click")
-      removeButton.parentNode.parentNode.remove()
-    })
+    addListenerToRowRemoveButton(removeButton)
   }
 }
 
@@ -66,14 +63,21 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
     }
 
     if (elClass === "remove") {
-
-
+      createRowRemoveButton(cell);
     }
 
 
     inventoryRow.appendChild(cell)
   }
   tableBody.appendChild(inventoryRow);
+}
+
+
+// create row remove eventListener function
+function addListenerToRowRemoveButton(node) {
+  node.addEventListener("click", (e) => {
+    node.parentNode.parentNode.remove()
+  })
 }
 
 // create stock decrement button
@@ -100,6 +104,12 @@ function createStockIncrementButton(node) {
   node.appendChild(incrementButton)
 }
 
-
 // create inventory row remove button
-// function createRowRemoveButton
+function createRowRemoveButton(node) {
+  const rowRemoveButton = document.createElement("button");
+  rowRemoveButton.classList.add("remove-button");
+  rowRemoveButton.innerText = "Remove";
+  addListenerToRowRemoveButton(rowRemoveButton)
+
+  node.appendChild(rowRemoveButton)
+}
