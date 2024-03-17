@@ -20,8 +20,8 @@
       </nav>
     </header>
     <section class="forms" id="forms">
-      <form class="lend-form" id="lend-form" name="lendForm">
-        <h2 class="form-title" id="lendFormTitle">Lend Form</h2>
+      <form class="add-game-form" id="add-game-form" name="addGameForm">
+        <h2 class="form-title" id="addFormTitle">Add Game</h2>
         <label>Platform<br>
           <select>
             <option value="">Select Platform</option>
@@ -40,7 +40,7 @@
           <input type="text" placeholder="Standard / Deluxe">
         </Label>
         <br>
-        <input type="submit" value="Lend Game">
+        <input type="submit" value="Add Game">
       </form>
       <form class="request-form" id="request-form" name="requestForm">
         <h2 class="form-title" id="requetFormTitle">Request Form</h2>
@@ -60,8 +60,8 @@
             <th>Edition</th>
             <th>Stock</th>
             <th>Out</th>
-            <th>Expected Availability</th>
-            <th>Borrow</th>
+            <th>Remove</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody id="inventory-body">
@@ -69,10 +69,14 @@
             <td class="platform" name="platform">PS5</td>
             <td class="game-title">Horizon Zero Dawn</td>
             <td class="game-edition">Standard</td>
-            <td class="stock">20</td>
+            <td class="stock">
+              <button class="decrease-stock">-</button>
+              <span>20</span>
+              <button class="inrease-stock">+</button>
+            </td>
             <td class="out">15</td>
             <td class="expected-availability">04/05/24</td>
-            <td class="borrow"><button class="borrow-button" type="submit">Borrow</button></td>
+            <td class="borrow"><button class="borrow-button" type="submit">Delete</button></td>
           </tr>
         </tbody>
       </table>
