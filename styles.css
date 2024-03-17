@@ -22,7 +22,54 @@ header {
   display: none;
 }
 
-td {
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+thead th:nth-child(1) {
+  width: 10%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 10%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
+}
+
+thead th:nth-child(5) {
+  width: 10%;
+}
+
+thead th:nth-child(6) {
+  width: 10%;
+}
+
+thead th:nth-child(7) {
+  width: 10%;
+}
+
+/* zebra striping */
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(226, 226, 226);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+th, td {
+  text-align: center;
+  border: 1px solid gray;
 }
 
 .borrow-button {
