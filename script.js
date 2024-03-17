@@ -2,7 +2,10 @@
 const gameForm = document.getElementById("add-game-form")
 console.log(gameForm)
 
-
+gameForm.addEventListener("submit", e => {
+  e.preventDefault();
+  console.log("form submit")
+})
 
 // get table body
 const tableBody = document.getElementById("inventory-body")
