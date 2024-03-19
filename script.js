@@ -26,7 +26,25 @@ addListenerToResetButton(resetButton, gameForm);
 // get table body
 const tableBody = document.getElementById("inventory-body")
 
-// add remove button listeners to existing remove buttons
+// add stock change listeners to stock buttons on existing rows
+function addStockChangeListenerToStockButtons () {
+  const tableRows = tableBody.querySelectorAll("tr");
+
+  for (let row of tableRows) {
+    const decrementButton = row.querySelector(".decrease-stock");
+    const stockSpan = row.querySelector(".stock");
+    const incrementButton = row.querySelector(".increase-stock");
+    const out = row.querySelector(".out");
+    const total = row.querySelector(".total")
+
+    addListenerToDecrementButton(decrementButton, stockSpan);
+    addListenerToIncrementButton(incrementButton, stockSpan);
+    addListenerUpdateTotalToStockButtons(decrementButton, incrementButton, stockSpan, out, total);
+  }
+}
+addStockChangeListenerToStockButtons ();
+
+// add remove row listeners to existing remove buttons
 function addListenerToRemoveButtons() {
   const removeButtons = tableBody.querySelectorAll(".remove-button")
   for (let removeButton of removeButtons) {
