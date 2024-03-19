@@ -7,19 +7,46 @@
 }
 
 body {
-
+margin: 25px;
 }
 
 header {
 }
 
-#forms {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+.add-game-form {
+  width: 500px;
 }
 
-#request-form {
-  display: none;
+input {
+  width: 50%;
+  text-indent: 10px;
+}
+
+select {
+  width: 50.5%
+}
+
+.initial-stock {
+  width: 50px;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+}
+
+form button {
+  height: 20px;
+  width: 75px;
+}
+
+.reset-button {
+  background: red;
+}
+
+.add-game-button {
+  background: green;
 }
 
 table {
@@ -70,6 +97,15 @@ tbody tr:nth-child(even) {
 th, td {
   text-align: center;
   border: 1px solid gray;
+}
+
+.decrease-stock, .increase-stock {
+ padding: 0 5px;
+ background: red;
+}
+
+td span {
+  margin: 0 10px;
 }
 
 .borrow-button {
