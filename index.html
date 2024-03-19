@@ -24,7 +24,7 @@
         <h2 class="form-title" id="addFormTitle">Add Game</h2>
         <label>Platform<br>
           <select name="platform">
-            <option value="">Select Platform</option>
+            <option value="">-- Select Platform --</option>
             <option value="PS5">PS5</option>
             <option value="Switch">Switch</option>
             <option value="XBox Series">XBox X/S</option>
@@ -42,18 +42,12 @@
         <br>
         <Label>Initial Stock
           <br>
-          <input type="number" name="initialStock" placeholder="#" min=1>
+          <input type="number" class="initial-stock" name="initialStock" placeholder="#" min=1>
         </Label>
         <br>
 
-        <button type="button">Reset</button><button type="submit">Add Game</button>
-      </form>
-      <form class="request-form" id="request-form" name="requestForm">
-        <h2 class="form-title" id="requetFormTitle">Request Form</h2>
-        <label>Platform</label>
-        <label>Game Title</label>
-        <label>Edition</Label>
-        <label>Return Date</label>
+        <button type="button" class="reset-button" id="reset-button">Reset</button>
+        <button type="submit" class="add-game-button">Add Game</button>
       </form>
     </section>
     <section class="inventory-section">
@@ -78,7 +72,7 @@
             <td class="stock-cell">
               <button class="decrease-stock">-</button>
               <span class="stock">20</span>
-              <button class="inrease-stock">+</button>
+              <button class="increase-stock">+</button>
             </td>
             <td class="out">15</td>
             <td class="total">35</td>
