@@ -2,6 +2,7 @@
 const gameForm = document.getElementById("add-game-form")
 console.log(gameForm)
 
+// form submission event
 gameForm.addEventListener("submit", e => {
   e.preventDefault();
   const platform = gameForm.platform.value
@@ -10,31 +11,36 @@ gameForm.addEventListener("submit", e => {
   const stock = gameForm.initialStock.value
 
   addInventoryRow(platform, gameTitle, edition, stock);
+  gameForm.reset();
 })
 
+// form reset button
+const resetButton = document.getElementById("reset-button")
+function addListenerToResetButton(button, form) {
+  button.addEventListener("click", () => {
+    form.reset();
+  })
+}
+addListenerToResetButton(resetButton, gameForm);
+  
 // get table body
 const tableBody = document.getElementById("inventory-body")
-console.log(tableBody)
-
 
 // add remove button listeners to existing remove buttons
-
 function addListenerToRemoveButtons() {
   const removeButtons = tableBody.querySelectorAll(".remove-button")
   for (let removeButton of removeButtons) {
     addListenerToRowRemoveButton(removeButton)
   }
 }
-
 addListenerToRemoveButtons();
-
 
 // table columns
 const tableColumns = ["platform", "game-title", "game-edition", "stock-cell", "out", "total", "remove"]
 
+// add inventory row function
 function addInventoryRow (platform, gameTitle, edition, stock) {
   // create new row
-  
   const inventoryRow = document.createElement("tr");
   
   // create cells
@@ -43,19 +49,21 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
     cell.classList.add(elClass);
     if (elClass === "platform") {
       cell.innerText = platform
-    }
+    } else
     if (elClass === "game-title") {
       cell.innerText = gameTitle
     }
-
     if (elClass === "game-edition") {
       cell.innerText = edition
     }
-
     if (elClass === "stock-cell") {
       createStockDecrementButton(cell)
       createStockSpan(cell, stock)
       createStockIncrementButton(cell)
+    }
+
+    if (elClass === "out") {
+      cell.innerText = 0
     }
 
     if (elClass === "total") {
@@ -66,12 +74,10 @@ function addInventoryRow (platform, gameTitle, edition, stock) {
       createRowRemoveButton(cell);
     }
 
-
     inventoryRow.appendChild(cell)
   }
   tableBody.appendChild(inventoryRow);
 }
-
 
 // create row remove eventListener function
 function addListenerToRowRemoveButton(node) {
@@ -110,6 +116,5 @@ function createRowRemoveButton(node) {
   rowRemoveButton.classList.add("remove-button");
   rowRemoveButton.innerText = "Remove";
   addListenerToRowRemoveButton(rowRemoveButton)
-
   node.appendChild(rowRemoveButton)
 }
