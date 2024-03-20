@@ -19,68 +19,68 @@
         <a href="#">About Us</a>
       </nav>
     </header>
-    <section class="forms" id="forms">
-      <form class="add-game-form" id="add-game-form" name="addGameForm">
-        <h2 class="form-title" id="addFormTitle">Add Game</h2>
-        <label>Platform<br>
-          <select name="platform">
-            <option value="Switch">-- Select Platform --</option> <!-- remove default -->
-            <option value="PS5">PS5</option>
-            <option value="Switch">Switch</option>
-            <option value="XBox Series">XBox X/S</option>
-          </select>
-        </label>
-        <br>
-        <label>Game Title<br>
-          <input type="text" name="gameTitle" placeholder="Game Title" value="Smash Brothers"> <!-- remove default-->
-        </label>
-        <br>
-        <Label>Edition
+    <main>
+      <section class="forms" id="forms">
+        <form class="add-game-form" id="add-game-form" name="addGameForm">
+          <h2 class="form-title" id="addFormTitle">Inventory Management Screen</h2>
+          <label>Platform<br>
+            <select name="platform">
+              <option value="Switch">-- Select Platform --</option> <!-- remove default -->
+              <option value="PS5">PS5</option>
+              <option value="Switch">Switch</option>
+              <option value="XBox Series">XBox X/S</option>
+            </select>
+          </label>
           <br>
-          <input type="text" name="edition" placeholder="Standard / Deluxe" value="Deluxe">  <!-- remove default-->
-        </Label>
-        <br>
-        <Label>Initial Stock
+          <label>Game Title<br>
+            <input type="text" name="gameTitle" placeholder="Game Title" value="Smash Brothers"> <!-- remove default-->
+          </label>
           <br>
-          <input type="number" class="initial-stock" name="initialStock" placeholder="#" min=1 value=10> <!-- remove default-->
-        </Label>
-        <br>
-
-        <button type="button" class="reset-button" id="reset-button">Reset</button>
-        <button type="submit" class="add-game-button">Add Game</button>
-      </form>
-    </section>
-    <section class="inventory-section">
-      <h2 class="inventory-title">Inventory</h2>
-      <table id="inventory-table">
-        <thead>
-          <tr>
-            <th scope="col">Platform</th>
-            <th scope="col">Game Title</th>
-            <th scope="col">Edition</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Out</th>
-            <th scope="col">Total</th>
-            <th scope="col">Remove</th>
-          </tr>
-        </thead>
-        <tbody id="inventory-body">
-          <tr>
-            <td class="platform" name="platform">PS5</td>
-            <td class="game-title">Horizon Zero Dawn</td>
-            <td class="game-edition">Standard</td>
-            <td class="stock-cell">
-              <button type="button" class="decrease-stock">-</button>
-              <span class="stock">20</span>
-              <button type="button" class="increase-stock">+</button>
-            </td>
-            <td class="out">15</td>
-            <td class="total">35</td>
-            <td class="remove"><button type="button" class="remove-button">Remove</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+          <Label>Edition
+            <br>
+            <input type="text" name="edition" placeholder="Standard / Deluxe" value="Deluxe">  <!-- remove default-->
+          </Label>
+          <br>
+          <Label>Initial Stock
+            <br>
+            <input type="number" class="initial-stock" name="initialStock" placeholder="#" min=1 value=10> <!-- remove default-->
+          </Label>
+          <br>
+          <button type="button" class="reset-button" id="reset-button">Reset</button>
+          <button type="submit" class="add-game-button">Add Game</button>
+        </form>
+      </section>
+      <section class="inventory-section">
+        <h2 class="inventory-title">Inventory</h2>
+        <table id="inventory-table">
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Game Title</th>
+              <th scope="col">Edition</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Out</th>
+              <th scope="col">Total</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-body">
+            <tr>
+              <td class="platform" name="platform">PS5</td>
+              <td class="game-title">Horizon Zero Dawn</td>
+              <td class="game-edition">Standard</td>
+              <td class="stock-cell">
+                <button type="button" class="decrease-stock">-</button>
+                <span class="stock">20</span>
+                <button type="button" class="increase-stock">+</button>
+              </td>
+              <td class="out">15</td>
+              <td class="total">35</td>
+              <td class="remove"><button type="button" class="remove-button">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
   </body>
-
 </html>
