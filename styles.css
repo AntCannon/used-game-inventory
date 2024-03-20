@@ -25,6 +25,20 @@ body main {
   margin: 25px;
 }
 
+.forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.forms ul {
+  margin: 5px 0 10px -100px;
+}
+
+.forms li {
+  margin:  0 0 5px 25px;
+}
+
+
 .add-game-form {
   width: 500px;
 }
